@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "node src/app.js",
     "dev": "nodemon src/app.js -e js,ejs",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix admin_dashboard && npm run build --prefix admin_dashboard"
   },
