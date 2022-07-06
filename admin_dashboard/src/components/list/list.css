@@ -1,0 +1,63 @@
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 99%;
+
+}
+
+#customers td,
+#customers th {
+  border: 1px solid white;
+  padding: 8px;
+}
+
+/* #customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+#customers tr:hover {
+  background-color: white;
+  color: black;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: gray;
+  color: white;
+  
+}
+
+.adduser {
+  display: flex;
+  align-items: center;
+  width: 82vw;
+}
+
+.btn_adduser {
+  height: fit-content;
+  right: 5%;
+  position: absolute;
+  background-color: #faca15;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 25px;
+  text-align: center;
+  align-items: center;
+}
+.btn_view{
+  margin: 5px 5px;
+  border-radius: 5px;
+  background-color: #0f9f6e;
+  color: white;
+  cursor: pointer;
+}
+.btn_del{
+  margin: 5px 5px;
+  border-radius: 5px;
+  background-color: #e02423;
+    color: white;
+  cursor: pointer;
+}
