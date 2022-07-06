@@ -25,6 +25,7 @@
     "mongoose": "^6.0.5",
     "multer": "^1.4.3",
     "nodemon": "^2.0.12",
-    "react-circular-progressbar": "^2.1.0"
+    "react-circular-progressbar": "^2.1.0",
+    "sass": "^1.53.0"
   }
 }
