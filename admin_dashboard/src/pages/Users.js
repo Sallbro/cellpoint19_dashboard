@@ -40,7 +40,7 @@ const Users = () => {
         }
         catch (e) {
             console.log(e);
-
+            navigate("/admin");
         }
     }
     const Del_user_data = async (_id) => {

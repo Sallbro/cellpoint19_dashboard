@@ -76,6 +76,7 @@ const Addnewprd = () => {
             }
             catch (e) {
                 console.log("error in edit user ", e);
+                navigate("/admin");
 
             }
         }

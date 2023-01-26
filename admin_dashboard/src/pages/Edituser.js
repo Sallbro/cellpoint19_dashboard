@@ -62,6 +62,7 @@ const Edituser = () => {
             }
             catch (e) {
                 console.log("error in edit user ", e);
+                navigate("/admin");
 
             }
         }

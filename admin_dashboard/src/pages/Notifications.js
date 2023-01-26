@@ -31,7 +31,7 @@ const Notifications = () => {
         }
         catch (e) {
             console.log(e);
-
+            navigate("/admin");
         }
     }
     useEffect(() => {

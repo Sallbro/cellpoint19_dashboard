@@ -43,7 +43,7 @@ const Editproduct = () => {
     const Additem = () => {
         // e.preventDefault();
         if (input_itm !== '') {
-            setPrd({...prd,image_details:[...image_details,input_itm]});
+            setPrd({ ...prd, image_details: [...image_details, input_itm] });
             setItemss([...itemss, input_itm]);
             setInput_itm("");
         }
@@ -58,7 +58,7 @@ const Editproduct = () => {
             return idx !== ind;
         });
         setItemss(upd_items);
-        setPrd({...prd,image_details:upd_items});
+        setPrd({ ...prd, image_details: upd_items });
     }
 
     const Clearall = () => {
@@ -96,7 +96,7 @@ const Editproduct = () => {
             }
             catch (e) {
                 console.log("error in edit user ", e);
-
+                navigate("/admin");
             }
         }
     }

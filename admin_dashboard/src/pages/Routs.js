@@ -17,6 +17,7 @@ import Oderslayout from '../Layouts/Oderslayout';
 import Singleorder from './Singleorder';
 import Editproduct from './Editproduct';
 import Edituser from './Edituser';
+import Admin from './Admin';
 const Routs = () => {
 
     return (
@@ -25,6 +26,10 @@ const Routs = () => {
                 <Routes>
                     <Route path="/" element={<Mainlayout />}>
                         <Route index element={<App />} ></Route>
+
+                        <Route path="admin" element={<Oderslayout />} >
+                            <Route index element={<Admin />} ></Route>
+                        </Route>
 
                         <Route path="orders" element={<Oderslayout />} >
                             <Route index element={<Orders />} ></Route>

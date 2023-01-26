@@ -30,6 +30,7 @@ const Singleuser = () => {
         }
         catch (e) {
             console.log(e);
+            navigate("/admin");
 
         }
     }
@@ -103,7 +104,7 @@ const Singleuser = () => {
                                 <th>Email</th>
                                 <th>Message</th>
                             </tr>
-                            
+
                             {open ? <Buffer /> :
                                 data?.messages?.map((elem) => {
                                     return (

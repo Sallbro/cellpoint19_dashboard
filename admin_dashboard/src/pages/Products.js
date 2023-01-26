@@ -31,18 +31,26 @@ const Products = () => {
                 },
 
             });
+            console.log("work1");
             const data = await res.json();
-            if (data) {
+            console.log("work2", data);
+            if (data && res.status === 200) {
                 console.log("data is: ", data);
                 setPrd(data);
                 setOpen(false);
+            } else {
+                console.log("work3");
+                navigate("/admin");
             }
+
         }
         catch (e) {
-            console.log(e);
+            console.log("work4");
+            navigate("/admin");
 
         }
     }
+
     const Del_prd_data = async (_id) => {
         try {
             const res = await fetch("/product/del", {
@@ -87,21 +95,21 @@ const Products = () => {
                         prd?.map((elem) => {
                             return (
                                 <>
-                                        <tr key={elem._id}>
-                                            <td>{elem.name}</td>
-                                            <td>{elem.item}</td>
-                                            <td>{elem.amount}</td>
-                                            <td>{elem.discount}%</td>
-                                            <td>
-                                                <button className="btn_view" onClick={() => {
-                                                    view_prd(elem._id);
-                                                }}>view</button>
-                                                <button className="btn_del" onClick={() => {
-                                                    Del_prd_data(elem._id);
-                                                }}>Delete</button>
-                                            </td>
-                                        </tr>
-                                    
+                                    <tr key={elem._id}>
+                                        <td>{elem.name}</td>
+                                        <td>{elem.item}</td>
+                                        <td>{elem.amount}</td>
+                                        <td>{elem.discount}%</td>
+                                        <td>
+                                            <button className="btn_view" onClick={() => {
+                                                view_prd(elem._id);
+                                            }}>view</button>
+                                            <button className="btn_del" onClick={() => {
+                                                Del_prd_data(elem._id);
+                                            }}>Delete</button>
+                                        </td>
+                                    </tr>
+
                                 </>
                             )
                         })}

@@ -33,8 +33,8 @@ const Singleproduct = () => {
             }
         }
         catch (e) {
-            console.log("Get_prd_data error ",e);
-
+            console.log("Get_prd_data error ", e);
+            navigate("/admin");
         }
     }
 

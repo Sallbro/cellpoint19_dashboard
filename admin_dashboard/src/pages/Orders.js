@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import '../components/list/list.css'
 import Buffer from "./Buffer";
 
 const Orders = () => {
   const [order, setOder] = useState([]);
   const [open, setOpen] = useState(true);
-
+const navigate=useNavigate();
   const Get_order_data = async () => {
     try {
       const res = await fetch("/orders", {
@@ -24,7 +25,7 @@ const Orders = () => {
     }
     catch (e) {
       console.log(e);
-      // history.push("/singin");
+      navigate("/admin");
 
     }
   }
